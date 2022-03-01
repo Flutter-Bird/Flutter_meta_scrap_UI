@@ -18,8 +18,8 @@ class _LoginwithPhoneNumberState extends State<LoginwithPhoneNumber> {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
+
           text: "Login with Phone Number",
-        
           style: GoogleFonts.lato(
             textStyle: const TextStyle(
               fontSize: 30,

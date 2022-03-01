@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:meta_scrap/screens/login_with_phone_number.dart';
-import 'package:meta_scrap/screens/splash_screen.dart';
+import 'package:meta_scrap/screens/2_login_with_phone_number.dart';
+import 'package:meta_scrap/screens/1_splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

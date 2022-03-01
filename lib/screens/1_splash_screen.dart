@@ -1,9 +1,6 @@
 import 'dart:async';
-import 'dart:ffi';
-import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'package:meta_scrap/screens/login_with_phone_number.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -20,12 +17,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
 
-   // Future.delayed(const Duration(seconds: 3),(() => ))))
-   Future.delayed(const Duration(seconds: 3),);
-
-
     super.initState();
-  
+  Timer(const Duration(seconds: 3),(() => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const SplashScreen()))
+   ) );
   }
   @override
   Widget build(BuildContext context) {
