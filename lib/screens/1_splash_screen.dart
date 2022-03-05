@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:meta_scrap/screens/2_login_with_phone_number.dart';
 
 
@@ -15,22 +15,27 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
+  late  Animation<double> animation;
+  late AnimationController controller;
+
   @override
   void initState() {
 
-    super.initState();
+  super.initState();
   Timer(const Duration(seconds: 3),(() => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginwithPhoneNumber()))
    ) );
   }
   @override
   Widget build(BuildContext context) {
     
-    return Container( 
-      decoration: const BoxDecoration(
-        image: DecorationImage(image: AssetImage("assets/images/zuhour-splash.png"),
-        fit:BoxFit.cover
-      ), 
-    
-    ),
-  );}
+    return Scaffold(
+      body: Center( 
+        child: Stack(
+          children: [
+            Image.asset("assets/images/meta_scrap.png",fit: BoxFit.cover,),
+            Text("Meta Scrap",style: GoogleFonts.monoton(fontSize: 30), )
+          ],
+        ),
+      ),
+    );}
 }

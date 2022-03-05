@@ -1,8 +1,4 @@
-
-
-import 'dart:js';
-
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:meta_scrap/screens/2_login_with_phone_number.dart';
 import 'package:meta_scrap/screens/3_opt_verification_screen.dart';
 import 'package:meta_scrap/screens/1_splash_screen.dart';
@@ -32,4 +28,4 @@ Route<dynamic> controller(RouteSettings gotopage){
     throw("this page route does not exits");
   }
   
-} 
+} */

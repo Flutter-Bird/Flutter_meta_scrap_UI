@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:meta_scrap/page_routes/routes.dart';
+import 'package:meta_scrap/screens/3_otp_verification_screen.dart';
+
+import '../widgets/heading_widget.dart';
 
 
 class LoginwithPhoneNumber extends StatefulWidget {
@@ -13,30 +14,11 @@ class LoginwithPhoneNumber extends StatefulWidget {
 
 class _LoginwithPhoneNumberState extends State<LoginwithPhoneNumber> {
 
-
-
-   Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-
-          text: "Login with Phone Number",
-          style: GoogleFonts.lato(
-            textStyle: const TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              color: Colors.black87,
-
-          ),
-         
-          )
-          
-    ));
-  }
-
    
    Widget _entryField(String title, {bool isPassword = false}) {
+  
     return Container(
+    
       margin:const EdgeInsets.symmetric(vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,6 +35,7 @@ class _LoginwithPhoneNumberState extends State<LoginwithPhoneNumber> {
               decoration:  InputDecoration(
                 hintText: "+971",
                 focusedBorder: OutlineInputBorder(
+                
                   borderRadius: BorderRadius.circular(5),
                   borderSide: const BorderSide(
                     color: Color.fromARGB(221, 182, 174, 174)
@@ -79,6 +62,7 @@ class _LoginwithPhoneNumberState extends State<LoginwithPhoneNumber> {
               Navigator.of(context).pop();
             }),
       ),
+     
       body:SizedBox(
 
         height: height,
@@ -86,23 +70,29 @@ class _LoginwithPhoneNumberState extends State<LoginwithPhoneNumber> {
         child: Stack(children: [
 
           Container(
+          
             padding: const EdgeInsets.symmetric(horizontal: 20),
 
-            child:Column(
-
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child:
+            Column(
+              
+               crossAxisAlignment: CrossAxisAlignment.center,
                mainAxisAlignment: MainAxisAlignment.center,
 
               children: [
                
-                 _title(),
+                 Heading(),
+               
                  const SizedBox(height:50),
+               
                  _entryField("Enter Phone Number:"),
+               
                  const SizedBox(height: 30,),
                  // ignore: deprecated_member_use
                  RaisedButton(
                    
-                 onPressed: () => Navigator.pushNamed(context, optVerificatonScreen),
+                 onPressed:()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const OTPverificationScreen())) ,
+                // () => Navigator.pushReplacementNamed(context, MaterialPageRoute(builder: (context)=> OPTverificationScreen())),
                  textColor: Colors.white,
                  color:const Color(0xFF4270b7) ,
                  child: const Text("Next"),
@@ -119,3 +109,4 @@ class _LoginwithPhoneNumberState extends State<LoginwithPhoneNumber> {
     );
   }
 }
+

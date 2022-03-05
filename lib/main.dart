@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:meta_scrap/screens/2_login_with_phone_number.dart';
 import 'package:meta_scrap/screens/1_splash_screen.dart';
+import 'package:meta_scrap/screens/4_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,14 +22,9 @@ class MyApp extends StatelessWidget {
         
       ),
       
-      home:const LoginwithPhoneNumber(),
-      initialRoute: "/",
-      routes: {
+      home:const Home(),
 
-        '/':(context) => const SplashScreen(),
 
-        
-      },
     );
   }
 }
