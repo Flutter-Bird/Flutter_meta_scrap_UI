@@ -5,14 +5,14 @@ import 'package:meta_scrap/screens/3_otp_verification_screen.dart';
 import '../widgets/heading_widget.dart';
 
 
-class LoginwithPhoneNumber extends StatefulWidget {
-  const LoginwithPhoneNumber({Key? key}) : super(key: key);
+class LoginWithPhoneNumber extends StatefulWidget {
+  const LoginWithPhoneNumber({Key? key}) : super(key: key);
 
   @override
-  _LoginwithPhoneNumberState createState() => _LoginwithPhoneNumberState();
+  _LoginWithPhoneNumberState createState() => _LoginWithPhoneNumberState();
 }
 
-class _LoginwithPhoneNumberState extends State<LoginwithPhoneNumber> {
+class _LoginWithPhoneNumberState extends State<LoginWithPhoneNumber> {
 
    
    Widget _entryField(String title, {bool isPassword = false}) {
